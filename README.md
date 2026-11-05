@@ -16,6 +16,18 @@ Open [BCU Web](http://127.0.0.1:5173). Browser data, lineups, preferences and ed
 
 The `web/` directory is a static application and can be served by another static HTTP host. It must be served over HTTP or HTTPS rather than opened through a `file:` URL. Java is needed only for building and extracting assets, not for using the application.
 
+## Deploy to Vercel
+
+Prepare and upload the locally built static site from the repository root:
+
+```powershell
+npm run prepare:vercel
+npx vercel link
+npx vercel deploy --prebuilt --archive=split-tgz
+```
+
+Select your existing Vercel project when linking. Add `--prod` to the deploy command for production. The preparation step stages `.vercel/output` with the browser engine and assets, including a gzip copy of the engine manifest. A Git-based deploy of this checkout lacks the generated files, which are ignored by Git.
+
 ## Build
 
 Build requirements: Node.js, Maven, Python 3, and JDK 21. Retain the supplied `BCU/` installation with its application JAR, libraries and assets. Keep the original installation separate from generated web output.

@@ -18,7 +18,14 @@ export async function initializeBattleEngine(api,onProgress=()=>{}){
   bootstrap=(async()=>{
     if(!api.engine?.registerAsset||!api.engine?.initializeEngine)throw new Error('The complete TeaVM battle engine has not been built. Run the build command and reload.');
     onProgress('Reading battle assets…');
-    const response=await fetch('data/engine-assets.json');if(!response.ok)throw new Error('The engine asset manifest is missing. Run the asset exporter.');
+    let response=await fetch('data/engine-assets.json');
+    if(response.status===404){
+      response=await fetch('data/engine-assets.json.gz');
+      if(response.ok&&response.body){
+        response=new Response(response.body.pipeThrough(new DecompressionStream('gzip')));
+      }
+    }
+    if(!response.ok)throw new Error('The engine asset manifest is missing. Run the asset exporter.');
     const manifest=await response.json();
     const rasterized=manifest.entries.filter(asset=>asset.width>0&&(asset.path.startsWith('./org/page/')||asset.path.endsWith('/poisbub/poisbub.png')));
     const cache=globalThis.__bcuImages??=new Map();

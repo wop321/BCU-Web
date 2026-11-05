@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1",
+    "prepare:vercel": "node scripts/prepare-vercel.mjs",
     "check": "node scripts/check.mjs",
     "test": "node --test tests/*.test.mjs"
   }

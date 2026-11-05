@@ -16,5 +16,6 @@ tools/*-test.zip
 tools/*-test.bcuzip
 tools/native-pack-fixtures/
 .runtime/
+.vercel/
 dist/
 *.log
