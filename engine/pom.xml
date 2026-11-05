@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.battlecatsultimate</groupId><artifactId>bcu-browser-engine</artifactId><version>0.1.0</version>
+  <properties><maven.compiler.release>17</maven.compiler.release><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><teavm.version>0.16.0</teavm.version><teavm.target>JAVASCRIPT</teavm.target><teavm.filename>bcu-engine.js</teavm.filename><teavm.destination>${project.basedir}/dist</teavm.destination></properties>
+  <dependencies>
+    <dependency><groupId>org.teavm</groupId><artifactId>teavm-classlib</artifactId><version>${teavm.version}</version></dependency>
+    <dependency><groupId>org.teavm</groupId><artifactId>teavm-jso-apis</artifactId><version>${teavm.version}</version></dependency>
+    <dependency><groupId>org.teavm</groupId><artifactId>teavm-extension-spi</artifactId><version>${teavm.version}</version><scope>provided</scope></dependency>
+    <dependency><groupId>com.battlecatsultimate</groupId><artifactId>bcu-desktop</artifactId><version>0.5.8.8</version><scope>system</scope><systemPath>${project.basedir}/vendor/bcu-desktop-0.5.8.8.jar</systemPath></dependency>
+    <dependency><groupId>com.google.code.gson</groupId><artifactId>gson</artifactId><version>2.10.1</version><scope>system</scope><systemPath>${project.basedir}/vendor/gson-2.10.1.jar</systemPath></dependency>
+    <dependency><groupId>com.google.code.findbugs</groupId><artifactId>jsr305</artifactId><version>3.0.2</version><scope>system</scope><systemPath>${project.basedir}/vendor/jsr305-3.0.2.jar</systemPath></dependency>
+    <dependency><groupId>org.json</groupId><artifactId>json</artifactId><version>20240303</version><scope>system</scope><systemPath>${project.basedir}/vendor/json-20240303.jar</systemPath></dependency>
+    <dependency><groupId>org.jetbrains.kotlin</groupId><artifactId>kotlin-stdlib</artifactId><version>2.2.0</version><scope>system</scope><systemPath>${project.basedir}/vendor/kotlin-stdlib-2.2.0.jar</systemPath></dependency>
+    <dependency><groupId>org.jcodec</groupId><artifactId>jcodec</artifactId><version>0.2.5</version><scope>system</scope><systemPath>${project.basedir}/vendor/jcodec-0.2.5.jar</systemPath></dependency>
+  </dependencies>
+  <build><plugins>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-resources-plugin</artifactId><version>3.4.0</version></plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.14.0</version><configuration><release>17</release></configuration></plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.4</version></plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-jar-plugin</artifactId><version>3.5.0</version></plugin>
+    <plugin><groupId>org.teavm</groupId><artifactId>teavm-maven-plugin</artifactId><version>${teavm.version}</version><executions><execution><phase>process-classes</phase><goals><goal>compile</goal></goals></execution></executions><configuration>
+      <mainClass>bcu.web.BrowserEngine</mainClass><targetType>${teavm.target}</targetType><targetDirectory>${teavm.destination}</targetDirectory><targetFileName>${teavm.filename}</targetFileName><jsModuleType>ES2015</jsModuleType><sourceMapsGenerated>true</sourceMapsGenerated><sourceFilesCopied>true</sourceFilesCopied><optimizationLevel>ADVANCED</optimizationLevel><stopOnErrors>true</stopOnErrors><strict>true</strict><transformers><transformer>bcu.web.BrowserArchiveTransformer</transformer><transformer>bcu.web.BrowserFloatTransformer</transformer></transformers>
+    </configuration></plugin>
+  </plugins></build>
+</project>

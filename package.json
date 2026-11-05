@@ -1,0 +1,12 @@
+{
+  "name": "bcu-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

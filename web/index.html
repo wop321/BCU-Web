@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eeeeee">
+  <title>Battle Cats Ultimate</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="menu" aria-label="Application menu">
+    <div class="menu"><button id="file-menu" aria-haspopup="true" aria-expanded="false">File</button><div class="popup" id="file-popup" hidden><button id="save-menu">Save All <span>Ctrl+S</span></button><button id="export-menu">Export browser backup…</button><button id="import-menu">Import browser backup…</button></div></div>
+    <div class="menu"><button id="history-menu" aria-haspopup="true" aria-expanded="false">History</button><div class="popup" id="history-popup" hidden><button id="back-menu">Go Back <span>Esc</span></button></div></div>
+  </nav>
+  <main id="page" aria-label="Battle Cats Ultimate"><div class="loading" role="status">Reading BC data…</div></main>
+  <dialog id="dialog"><form method="dialog"><div id="dialog-title"></div><div id="dialog-content"></div><div id="dialog-actions"></div></form></dialog>
+  <input type="file" id="file-input" hidden>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

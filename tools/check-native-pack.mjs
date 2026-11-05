@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {md5,decodeNativePack,encodeNativePack,createEmptyPack} from '../web/packs.mjs';
+const workspace=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+for(const [value,expected]of [['','d41d8cd98f00b204e9800998ecf8427e'],['a','0cc175b9c0f1b6a831c399e269772661'],['abc','900150983cd24fb0d6963f7d28e17f72'],['message digest','f96b697d7cb7938d525a2f31aaf161d0']])assert.equal(Buffer.from(md5(value)).toString('hex'),expected);
+const bytes=new Uint8Array(await fs.readFile(path.join(workspace,'tools/fixtures/fixture.pack.bcuzip'))),decoded=await decodeNativePack(bytes);
+assert.equal(decoded.descriptor.desc.id,'abcdef');assert.equal(decoded.document.units.data.length,1);assert.equal(decoded.document.enemies.data.length,1);assert.equal(decoded.document.mc.maps.data[0].val.list.data.length,1);
+for(const [name,data]of decoded.files)assert.deepEqual(data,new Uint8Array(await fs.readFile(path.join(workspace,'tools/fixtures/native-pack',name))));
+decoded.files.set('trailing.bin',new Uint8Array([1,2,0,0]));decoded.files.set('empty.bin',new Uint8Array());
+const encoded=await encodeNativePack(decoded.descriptor.desc,decoded.files,'test-password'),reopened=await decodeNativePack(encoded);
+for(const [name,data]of decoded.files)assert.deepEqual(reopened.files.get(name),data,'File bytes must survive native export: '+name);
+await fs.writeFile(path.join(workspace,'tools/fixtures/browser.pack.bcuzip'),encoded);
+const empty=createEmptyPack('abc12345','Author','Native pack');const emptyFile=await encodeNativePack(empty.desc,new Map([['pack.json',new TextEncoder().encode(JSON.stringify(empty))]]),'');assert.deepEqual((await decodeNativePack(emptyFile)).document,empty);
+const invalid=bytes.slice();invalid[0]^=1;await assert.rejects(()=>decodeNativePack(invalid),/signature/);
+console.log('Native BCU Java→browser decoding and browser→browser roundtrip passed; original JSON, binary trailing zeros and empty files preserved.');

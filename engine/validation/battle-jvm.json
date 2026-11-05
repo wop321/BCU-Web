@@ -1,0 +1,418 @@
+[
+  {
+    "frame": 0,
+    "money": 0,
+    "maxMoney": 0,
+    "workerLevel": 1,
+    "cannon": 0,
+    "maxCannon": 950,
+    "enemyHealth": 10000,
+    "catHealth": 236000,
+    "entities": []
+  },
+  {
+    "frame": 300,
+    "money": 1845,
+    "maxMoney": 6000,
+    "workerLevel": 1,
+    "cannon": 300,
+    "maxCannon": 950,
+    "enemyHealth": 10000,
+    "catHealth": 236000,
+    "entities": [
+      {
+        "direction": 1,
+        "position": 1100.0,
+        "health": 2999,
+        "maxHealth": 2999,
+        "layer": 5
+      },
+      {
+        "direction": 1,
+        "position": 1900.0,
+        "health": 2999,
+        "maxHealth": 2999,
+        "layer": 6
+      },
+      {
+        "direction": 1,
+        "position": 952.5,
+        "health": 180,
+        "maxHealth": 180,
+        "layer": 7
+      }
+    ]
+  },
+  {
+    "frame": 600,
+    "money": 2817,
+    "maxMoney": 7500,
+    "workerLevel": 2,
+    "cannon": 600,
+    "maxCannon": 950,
+    "enemyHealth": 10000,
+    "catHealth": 235640,
+    "entities": [
+      {
+        "direction": 1,
+        "position": 1350.0,
+        "health": 180,
+        "maxHealth": 180,
+        "layer": 0
+      },
+      {
+        "direction": 1,
+        "position": 1280.0,
+        "health": 2999,
+        "maxHealth": 2999,
+        "layer": 1
+      },
+      {
+        "direction": -1,
+        "position": 2000.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 2
+      },
+      {
+        "direction": -1,
+        "position": 2840.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 3
+      },
+      {
+        "direction": -1,
+        "position": 2645.0,
+        "health": 840,
+        "maxHealth": 1200,
+        "layer": 4
+      },
+      {
+        "direction": 1,
+        "position": 2180.0,
+        "health": 2809,
+        "maxHealth": 2999,
+        "layer": 5
+      },
+      {
+        "direction": 1,
+        "position": 2700.0,
+        "health": 2524,
+        "maxHealth": 2999,
+        "layer": 6
+      },
+      {
+        "direction": -1,
+        "position": 1950.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 7
+      },
+      {
+        "direction": 1,
+        "position": 1702.5,
+        "health": 180,
+        "maxHealth": 180,
+        "layer": 7
+      },
+      {
+        "direction": -1,
+        "position": 1975.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 8
+      },
+      {
+        "direction": 1,
+        "position": 1760.0,
+        "health": 2999,
+        "maxHealth": 2999,
+        "layer": 9
+      }
+    ]
+  },
+  {
+    "frame": 900,
+    "money": 4498,
+    "maxMoney": 7500,
+    "workerLevel": 2,
+    "cannon": 900,
+    "maxCannon": 950,
+    "enemyHealth": 10000,
+    "catHealth": 234560,
+    "entities": [
+      {
+        "direction": -1,
+        "position": 2815.0,
+        "health": 480,
+        "maxHealth": 1200,
+        "layer": 0
+      },
+      {
+        "direction": 1,
+        "position": 2236.0,
+        "health": 2714,
+        "maxHealth": 2999,
+        "layer": 1
+      },
+      {
+        "direction": -1,
+        "position": 1320.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 2
+      },
+      {
+        "direction": -1,
+        "position": 2780.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 2
+      },
+      {
+        "direction": 1,
+        "position": 842.5,
+        "health": 180,
+        "maxHealth": 180,
+        "layer": 2
+      },
+      {
+        "direction": -1,
+        "position": 2815.0,
+        "health": 480,
+        "maxHealth": 1200,
+        "layer": 3
+      },
+      {
+        "direction": 1,
+        "position": 720.0,
+        "health": 2999,
+        "maxHealth": 2999,
+        "layer": 3
+      },
+      {
+        "direction": -1,
+        "position": 2830.0,
+        "health": 120,
+        "maxHealth": 1200,
+        "layer": 4
+      },
+      {
+        "direction": 1,
+        "position": 2451.0,
+        "health": 1289,
+        "maxHealth": 2999,
+        "layer": 5
+      },
+      {
+        "direction": 1,
+        "position": 2675.0,
+        "health": 1099,
+        "maxHealth": 2999,
+        "layer": 6
+      },
+      {
+        "direction": -1,
+        "position": 1275.0,
+        "health": 1152,
+        "maxHealth": 1200,
+        "layer": 7
+      },
+      {
+        "direction": -1,
+        "position": 1300.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 8
+      },
+      {
+        "direction": -1,
+        "position": 2775.0,
+        "health": 840,
+        "maxHealth": 1200,
+        "layer": 8
+      },
+      {
+        "direction": -1,
+        "position": 2800.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 8
+      },
+      {
+        "direction": -1,
+        "position": 3070.0,
+        "health": 480,
+        "maxHealth": 1200,
+        "layer": 9
+      },
+      {
+        "direction": 1,
+        "position": 2676.0,
+        "health": 2619,
+        "maxHealth": 2999,
+        "layer": 9
+      }
+    ]
+  },
+  {
+    "frame": 1200,
+    "money": 6120,
+    "maxMoney": 7500,
+    "workerLevel": 2,
+    "cannon": 950,
+    "maxCannon": 950,
+    "enemyHealth": 8765,
+    "catHealth": 231680,
+    "entities": [
+      {
+        "direction": -1,
+        "position": 2825.0,
+        "health": 120,
+        "maxHealth": 1200,
+        "layer": 0
+      },
+      {
+        "direction": -1,
+        "position": 2675.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 0
+      },
+      {
+        "direction": 1,
+        "position": 2515.0,
+        "health": 1479,
+        "maxHealth": 2999,
+        "layer": 1
+      },
+      {
+        "direction": 1,
+        "position": 535.0,
+        "health": 85,
+        "maxHealth": 180,
+        "layer": 1
+      },
+      {
+        "direction": -1,
+        "position": 940.0,
+        "health": 1184,
+        "maxHealth": 1200,
+        "layer": 2
+      },
+      {
+        "direction": -1,
+        "position": 2655.0,
+        "health": 480,
+        "maxHealth": 1200,
+        "layer": 2
+      },
+      {
+        "direction": -1,
+        "position": 2825.0,
+        "health": 120,
+        "maxHealth": 1200,
+        "layer": 3
+      },
+      {
+        "direction": -1,
+        "position": 2685.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 3
+      },
+      {
+        "direction": 1,
+        "position": 1676.0,
+        "health": 2714,
+        "maxHealth": 2999,
+        "layer": 3
+      },
+      {
+        "direction": -1,
+        "position": 2655.0,
+        "health": 120,
+        "maxHealth": 1200,
+        "layer": 4
+      },
+      {
+        "direction": -1,
+        "position": 2655.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 5
+      },
+      {
+        "direction": 1,
+        "position": 2358.0,
+        "health": 1499,
+        "maxHealth": 2999,
+        "layer": 5
+      },
+      {
+        "direction": 1,
+        "position": 2358.0,
+        "health": 1499,
+        "maxHealth": 2999,
+        "layer": 6
+      },
+      {
+        "direction": -1,
+        "position": 940.0,
+        "health": 1152,
+        "maxHealth": 1200,
+        "layer": 7
+      },
+      {
+        "direction": -1,
+        "position": 2655.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 7
+      },
+      {
+        "direction": -1,
+        "position": 940.0,
+        "health": 1200,
+        "maxHealth": 1200,
+        "layer": 8
+      },
+      {
+        "direction": -1,
+        "position": 2655.0,
+        "health": 480,
+        "maxHealth": 1200,
+        "layer": 8
+      },
+      {
+        "direction": -1,
+        "position": 2680.0,
+        "health": 480,
+        "maxHealth": 1200,
+        "layer": 8
+      },
+      {
+        "direction": -1,
+        "position": 2645.0,
+        "health": 840,
+        "maxHealth": 1200,
+        "layer": 8
+      },
+      {
+        "direction": -1,
+        "position": 2680.0,
+        "health": 480,
+        "maxHealth": 1200,
+        "layer": 9
+      },
+      {
+        "direction": 1,
+        "position": 2547.0,
+        "health": 339,
+        "maxHealth": 2999,
+        "layer": 9
+      }
+    ]
+  }
+]

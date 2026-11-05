@@ -1,0 +1,13 @@
+{
+  "desktopJar": "BCU/BCU-0-5-8-8.jar",
+  "desktopSha256": "d48f08ced1303f03e510bd1114bf20aae9567c437abc0846f6ac2b5545394f1a",
+  "desktopSource": {
+    "repository": "https://github.com/battlecatsultimate/BCU-java-PC.git",
+    "commit": "386d4c25b6deb2fd3a44ad2e4f1bf95b3083817a"
+  },
+  "commonSource": {
+    "repository": "https://github.com/battlecatsultimate/BCU_java_util_common.git",
+    "commit": "a8ec3b34076d7075cb9e15025005c4e0b3159c74"
+  },
+  "teaVM": "0.16.0"
+}
